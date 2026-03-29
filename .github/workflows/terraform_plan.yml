@@ -25,11 +25,13 @@ jobs:
         run: |
           terraform --version
 
-      # - name: download-artifact
-      #   uses: dawidd6/action-download-artifact@v19
-      #   with:
-      #     name: terraform-state
-      #     path: terraform
+      - name: download-artifact
+        uses: dawidd6/action-download-artifact@v19
+        with:
+          name: terraform-state
+          path: terraform
+          workflow: terraform_deployment.yml
+
 
 
       - name: terraform-init-plan
