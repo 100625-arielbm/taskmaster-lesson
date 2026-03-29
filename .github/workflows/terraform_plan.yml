@@ -52,9 +52,9 @@ jobs:
       - name: terraform-init-plan
         uses: dflook/terraform-plan@v2
         env:
-          AWS-ACCESS-KEY-ID: ${{ secrets.AWS_ACCESS_KEY }}
-          AWS-SECRET-ACCESS-KEY: ${{ secrets.AWS_SECRET_ACCESS }}
-          AWS-REGION: us-east-1
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS }}
+          AWS_REGION: us-east-1
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path: terraform
